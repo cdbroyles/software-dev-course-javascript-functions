@@ -86,22 +86,28 @@ function greetUser(name) {
 greetUser(["Alice", "Bob", "Charlie"]);
 
 // Script 2 - Sum calculation
-function calculateSum(a, b) {
-   newSum = a + b;
-   console.log("The sum of " + a + " and " + b + " is " + newSum);
-   return newSum;
+function calculateSum(numArray) {
+   let total = 0;
+   for (let i = 0; i < numArray.length; i++) {
+       total += numArray[i];
+   }
+   console.log("The sum of " + numArray.join(" and ") + " is " + total);
+   return total;
 }
 
-calculateSum(5, 10);
+calculateSum([5, 10, 15]);
 
 // Script 3 - Product calculation
-function calculateProduct(a, b) {
-   newProduct = a * b;
-   console.log("The product of " + a + " and " + b + " is " + newProduct);
-   return newProduct;
+function calculateProduct(numArray) {
+   let product = 1;
+   for (let i = 0; i < numArray.length; i++) {
+       product *= numArray[i];
+   }
+   console.log("The product of " + numArray.join(" and ") + " is " + product);
+   return product;
 }
 
-calculateProduct(5, 10);
+calculateProduct([5, 10, 2]);
 
 // Script 4 - Print names from a list
 function printNames(nameList) {
