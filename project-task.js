@@ -37,14 +37,17 @@ console.log("Welcome, Alice!");
 console.log("Welcome, Bob!");
 console.log("Welcome, Charlie!");
 
+
 // Script 2 - Sum calculation
 let num1 = 5, num2 = 10;
 let sum = num1 + num2;
 console.log("The sum of 5 and 10 is " + sum);
 
+
 // Script 3 - Product calculation
 let product = num1 * num2;
 console.log("The product of 5 and 10 is " + product);
+
 
 // Script 4 - Print names from a list
 let names = ["Alice", "Bob", "Charlie"];
@@ -52,6 +55,7 @@ console.log("Names in the list:");
 for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
 }
+
 
 /*
 ===========================================
@@ -72,3 +76,39 @@ for (let i = 0; i < names.length; i++) {
 */
 
 // ✅ Your refactored code goes below this line!
+
+// Script 1 - Greeting multiple users
+function greetUser(name) {
+   for(let i = 0; i < name.length; i++) {
+       console.log("Welcome, " + name[i] + "!");
+   }
+}
+greetUser(["Alice", "Bob", "Charlie"]);
+
+// Script 2 - Sum calculation
+function calculateSum(a, b) {
+   newSum = a + b;
+   console.log("The sum of " + a + " and " + b + " is " + newSum);
+   return newSum;
+}
+
+calculateSum(5, 10);
+
+// Script 3 - Product calculation
+function calculateProduct(a, b) {
+   newProduct = a * b;
+   console.log("The product of " + a + " and " + b + " is " + newProduct);
+   return newProduct;
+}
+
+calculateProduct(5, 10);
+
+// Script 4 - Print names from a list
+function printNames(nameList) {
+   console.log("Names in the list:");
+   for (let i = 0; i < nameList.length; i++) {
+       console.log(nameList[i]);
+   }
+}
+
+printNames(["Alice", "Bob", "Charlie"]);
